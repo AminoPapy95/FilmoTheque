@@ -10,13 +10,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" >
 
-    <title>Hello, world!</title>
+    <title>Projet Reservations @yield('title')</title>
 </head>
 <body>
 
 <div class="wrapper">
 
 @include('body.header')
+
+@yield('content')
 
 </div>
 
