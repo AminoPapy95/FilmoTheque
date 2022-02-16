@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             TypeSeeder::class,
             LocalitySeeder::class,
             LocationSeeder::class,
+            ShowSeeder::class,
         ]);
 
     }

@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends Model
+class Show extends Model
 {
-
     use HasFactory;
 
     /**
@@ -17,41 +16,34 @@ class Location extends Model
      */
     protected $fillable = [
         'slug',
-        'designation',
-        'address',
-        'locality_id',
-        'website',
-        'phone',
+        'title',
+        'description',
+        'poster_url',
+        'location_id',
+        'bookable',
+        'price',
     ];
 
-    /**
+   /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'locations';
+    protected $table = 'shows';
 
-    /**
+   /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    public $timestamps = false;
+    public $timestamps = true;
 
     /**
-     * Get the locality of the location
+     * Get the main location of the show
      */
-    public function locality()
+    public function location()
     {
-        return $this->belongsTo('App\Models\Locality');
+        return $this->belongsTo(Location::class);
     }
 
-
-    /**
-     * Get the shows in this location.
-     */
-    public function shows()
-    {
-        return $this->hasMany(Show::class);
-    }
 }
