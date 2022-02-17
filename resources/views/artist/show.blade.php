@@ -11,5 +11,5 @@
         <li>{{ $type->type }}</li>
     @endforeach
     </ul>
-
+    <div><a href="{{ route('artist_edit' ,$artist->id) }}">Modifier</a></div>
 @endsection
