@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ArtistType;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
             ShowSeeder::class,
             RepresentationSeeder::class,
             ArtistTypeSeeder::class,
+            ArtistTypeShowSeeder::class,
         ]);
 
     }
