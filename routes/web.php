@@ -74,3 +74,7 @@ Route::get('/representation', [RepresentationController::class, 'index'])
 Route::get('/representation/{id}', [RepresentationController::class, 'show'])
 ->where('id', '[0-9]+')->name('representation_show');
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
