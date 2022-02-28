@@ -23,7 +23,7 @@ use App\Http\Controllers\RepresentationController;
 
 Route::get('/', function () {
     return view('master');
-});
+})->name('home');
 
 // ROUTE ARTIST
 Route::get('/artist', [ArtistController::class, 'index'])->name('artist_index');
@@ -32,7 +32,7 @@ Route::get('/artist/{id}', [ArtistController::class, 'show'])->where('id', '[0-9
 
 Route::get('/artist/edit/{id}', [App\Http\Controllers\ArtistController::class, 'edit'])
 	->where('id', '[0-9]+')->name('artist_edit');
-    
+
 Route::put('/artist/{id}', [App\Http\Controllers\ArtistController::class, 'update'])
 	->where('id', '[0-9]+')->name('artist_update');
 

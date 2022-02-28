@@ -1,5 +1,4 @@
 @extends('master')
-
 @section('title', 'Liste des artistes')
 
 @section('content')
