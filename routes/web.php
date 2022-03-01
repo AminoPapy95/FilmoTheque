@@ -25,6 +25,14 @@ Route::get('/', function () {
     return view('master');
 })->name('home');
 
+Route::get('/template', function () {
+    return view('template.master');
+})->name('template');
+
+Route::get('/bref', function () {
+    return view('template.bref.index');
+})->name('bref');
+
 // ROUTE ARTIST
 Route::get('/artist', [ArtistController::class, 'index'])->name('artist_index');
 

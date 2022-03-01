@@ -1,4 +1,4 @@
-@extends('master')
+@extends('template.master')
 
 @section('title', 'Liste des localités')
 

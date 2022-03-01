@@ -1,4 +1,4 @@
-@extends('master')
+@extends('template.master')
 
 @section('title', 'Modifier un artiste')
 
