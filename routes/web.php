@@ -86,3 +86,5 @@ Route::get('/representation/{id}', [RepresentationController::class, 'show'])
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('redirects','App\Http\Controllers\HomeController@index');
